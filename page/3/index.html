@@ -46,31 +46,27 @@
   };
 </script>
 
-  <meta name="description" content="#testre">
-<meta property="og:type" content="article">
-<meta property="og:title" content="testre">
-<meta property="og:url" content="http://yoursite.com/2020/01/15/testre/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/page/3/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="#testre">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-01-15T12:27:00.000Z">
-<meta property="article:modified_time" content="2020-01-16T04:57:01.548Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2020/01/15/testre/">
+<link rel="canonical" href="http://yoursite.com/page/3/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: false,
-    isPost: true
+    isHome: true,
+    isPost: false
   };
 </script>
 
-  <title>testre | Hexo</title>
+  <title>Hexo</title>
   
 
 
@@ -165,11 +161,11 @@
             
 
   <div class="posts-expand">
-      
+        
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/15/testre/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/01/handcrafted-pyc/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -182,7 +178,8 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          testre
+          
+            <a href="/2020/01/01/handcrafted-pyc/" class="post-title-link" itemprop="url">handcrafted-pyc</a>
         </h1>
 
         <div class="post-meta">
@@ -191,16 +188,10 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2020-01-15 20:27:00" itemprop="dateCreated datePublished" datetime="2020-01-15T20:27:00+08:00">2020-01-15</time>
+              <time title="Created: 2020-01-01 20:20:08 / Modified: 21:31:58" itemprop="dateCreated datePublished" datetime="2020-01-01T20:20:08+08:00">2020-01-01</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-01-16 12:57:01" itemprop="dateModified" datetime="2020-01-16T12:57:01+08:00">2020-01-16</time>
-              </span>
 
           
 
@@ -213,46 +204,36 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>#testre</p>
-<a id="more"></a>
-<p>1.首先拿到题目，发现是elf文件，扔去linux下运行，发现需要输入，但没有显示“wrong”之类的字符。</p>
-<p>2.用ida打开，进入main函数中<br>    <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">__int64 __fastcall <span class="title">main</span><span class="params">(__int64 a1, <span class="keyword">char</span> **a2, <span class="keyword">char</span> **a3)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">void</span> *ptr; <span class="comment">// ST10_8</span></span><br><span class="line">	__int64 v5; <span class="comment">// [rsp+18h] [rbp-28h]</span></span><br><span class="line">	<span class="keyword">char</span> v6; <span class="comment">// [rsp+20h] [rbp-20h]</span></span><br><span class="line">	<span class="keyword">int</span> v7; <span class="comment">// [rsp+3Ch] [rbp-4h]	</span></span><br><span class="line"> 		v7 = <span class="number">0</span>;</span><br><span class="line"> 		v5 = <span class="number">256L</span>L;</span><br><span class="line"> 		sub_400D00(&amp;v6, <span class="number">0x11</span>uLL);</span><br><span class="line"> 		ptr = <span class="built_in">malloc</span>(<span class="number">0x100</span>uLL);</span><br><span class="line"> 		sub_400700(ptr, &amp;v5, &amp;v6, <span class="number">0x10</span>uLL);</span><br><span class="line"> 		<span class="built_in">free</span>(ptr);</span><br><span class="line"> 		<span class="keyword">return</span> <span class="number">0L</span>L;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>3.跟进sub_400700函数，发现有输出“correct”字符串，认为这是判断函数。</p>
-<p>4.根据判断代码:<br>    <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> ( !<span class="built_in">strncmp</span>(s, <span class="string">"D9"</span>, <span class="number">2u</span>LL)</span><br><span class="line">&amp;&amp; !<span class="built_in">strncmp</span>(s + <span class="number">20</span>, <span class="string">"Mp"</span>, <span class="number">2u</span>LL)</span><br><span class="line">&amp;&amp; !<span class="built_in">strncmp</span>(s + <span class="number">18</span>, <span class="string">"MR"</span>, <span class="number">2u</span>LL)</span><br><span class="line">&amp;&amp; !<span class="built_in">strncmp</span>(s + <span class="number">2</span>, <span class="string">"cS9N"</span>, <span class="number">4u</span>LL)</span><br><span class="line">&amp;&amp; !<span class="built_in">strncmp</span>(s + <span class="number">6</span>, <span class="string">"9iHjM"</span>, <span class="number">5u</span>LL)</span><br><span class="line">&amp;&amp; !<span class="built_in">strncmp</span>(s + <span class="number">11</span>, <span class="string">"LTdA8YS"</span>, <span class="number">7u</span>LL) )</span><br></pre></td></tr></table></figure><br>  得出字符串s最后要等于D9cS9N9iHjMLTdA8YSMRMp。</p>
-<p>5.参考其他大佬的wp，得知一下代码为base58加密。<br>    <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> ( j &lt; n )</span><br><span class="line">&#123;</span><br><span class="line">v4 = v11;</span><br><span class="line">*(s + v20) = byte_400EB0[v11[j]];         <span class="comment">// base58编码</span></span><br><span class="line">*(v26 + v20++) = byte_400EF0[v4[j++]];    <span class="comment">// base64编码，但对结果无影响</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>6.最后把s字符串用base58解密，得出flag.</p>
-<p>7.总的来说这题做得挺扯蛋的，就base58编码过程的代码看着就头大，不过第一次了解到base58编码，和其编码表<br>。</p>
-
+          <p>#handcrafted-pyc</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/01/01/handcrafted-pyc/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
     </div>
 
     
     
     
-
       <footer class="post-footer">
-
-        
-
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2020/01/12/EasyRE/" rel="prev" title="EasyRE">
-      <i class="fa fa-chevron-left"></i> EasyRE
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/01/16/Newbie-calculations/" rel="next" title="Newbie_calculations">
-      Newbie_calculations <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
+        <div class="post-eof"></div>
       </footer>
-    
   </article>
   
   
   
 
   </div>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+  </nav>
+
 
 
           </div>
