@@ -46,15 +46,15 @@
   };
 </script>
 
-  <meta name="description" content="#reverse_box&lt;–more–&gt;1.main(): 123456789101112131415161718int __cdecl main(int a1, char **a2)&amp;#123;  size_t i; &#x2F;&#x2F; [esp+18h] [ebp-10Ch]  int v4; &#x2F;&#x2F; [esp+1Ch] [ebp-108h]  unsigned int v5; &#x2F;&#x2F; [esp+1">
+  <meta name="description" content="#reverse_box">
 <meta property="og:type" content="article">
 <meta property="og:title" content="reverse_box">
 <meta property="og:url" content="http://yoursite.com/2020/02/28/reverse-box/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="#reverse_box&lt;–more–&gt;1.main(): 123456789101112131415161718int __cdecl main(int a1, char **a2)&amp;#123;  size_t i; &#x2F;&#x2F; [esp+18h] [ebp-10Ch]  int v4; &#x2F;&#x2F; [esp+1Ch] [ebp-108h]  unsigned int v5; &#x2F;&#x2F; [esp+1">
+<meta property="og:description" content="#reverse_box">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-02-28T02:24:16.000Z">
-<meta property="article:modified_time" content="2020-02-28T03:20:04.792Z">
+<meta property="article:modified_time" content="2020-02-28T07:17:44.083Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 
@@ -193,7 +193,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-02-28 10:24:16 / Modified: 11:20:04" itemprop="dateCreated datePublished" datetime="2020-02-28T10:24:16+08:00">2020-02-28</time>
+              <time title="Created: 2020-02-28 10:24:16 / Modified: 15:17:44" itemprop="dateCreated datePublished" datetime="2020-02-28T10:24:16+08:00">2020-02-28</time>
             </span>
 
           
@@ -207,7 +207,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>#reverse_box<br>&lt;–more–&gt;<br>1.main():</p>
+        <p>#reverse_box</p>
+<a id="more"></a>
+<p>1.main():</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> __cdecl <span class="title">main</span><span class="params">(<span class="keyword">int</span> a1, <span class="keyword">char</span> **a2)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">size_t</span> i; <span class="comment">// [esp+18h] [ebp-10Ch]</span></span><br><span class="line">  <span class="keyword">int</span> v4; <span class="comment">// [esp+1Ch] [ebp-108h]</span></span><br><span class="line">  <span class="keyword">unsigned</span> <span class="keyword">int</span> v5; <span class="comment">// [esp+11Ch] [ebp-8h]</span></span><br><span class="line"></span><br><span class="line">  v5 = __readgsdword(<span class="number">0x14</span>u);</span><br><span class="line">  <span class="keyword">if</span> ( a1 &lt;= <span class="number">1</span> )</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"usage: %s flag\n"</span>, *a2);</span><br><span class="line">    <span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  sub_804858D(&amp;v4);</span><br><span class="line">  <span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt; <span class="built_in">strlen</span>(a2[<span class="number">1</span>]); ++i )</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%02x"</span>, *(&amp;v4 + a2[<span class="number">1</span>][i]));</span><br><span class="line">  <span class="built_in">putchar</span>(<span class="string">'\n'</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>题目需要输出”95eeaf95ef94234999582f722f492f72b19a7aaf72e6e776b57aee722fe77ab5ad9aaeb156729676ae7a236d99b1df4a”,猜测输出和输入有关。</p>
 <p>2.sub_804858D()</p>
